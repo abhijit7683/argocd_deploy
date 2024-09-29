@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: netflix
-  name: netflix-deploy
+  name: netflix-app
 spec:
   replicas: 5
   selector:
@@ -15,7 +15,7 @@ spec:
         app: netflix
     spec:
       containers:
-      - name: cont1
+      - name: netflix
         image: abhijit7683/netflix:latest
         ports:
           - containerPort: 80
