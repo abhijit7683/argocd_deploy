@@ -5,7 +5,7 @@ metadata:
     app: netflix
   name: netflix-deploy
 spec:
-  replicas: 10
+  replicas: 5
   selector:
     matchLabels:
       app: netflix
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: abc
+  name: netflix
 spec:
   type: LoadBalancer
   selector:
