@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: netflix
-        image: satya1541/netflix:latest
+        image: abhijit7683/netflix:latest
         ports:
           - containerPort: 80
 ---
@@ -29,5 +29,5 @@ spec:
   selector:
     app: netflix
   ports:
-    - port: 81
-      targetPort: 8080
+    - port: 8o
+      targetPort: 80
