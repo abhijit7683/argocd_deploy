@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: train
-  name: train-deploy
+    app: netflix
+  name: netflix-deploy
 spec:
-  replicas: 15
+  replicas: 5
   selector:
     matchLabels:
-      app: train
+      app: netflix
   template:
     metadata:
       labels:
-        app: train
+        app: netflix
     spec:
       containers:
       - name: cont1
-        image: abhijit7683/train:latest
+        image: abhijit7683/netflix:latest
         ports:
           - containerPort: 80
 ---
@@ -27,7 +27,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: train
+    app: netflix
   ports:
     - port: 80
       targetPort: 80
