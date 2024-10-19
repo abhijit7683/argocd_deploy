@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: netflix
-  name: netflix-app
+    app: what
+  name: whats-app
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: netflix
+      app: what
   template:
     metadata:
       labels:
-        app: netflix
+        app: what
     spec:
       containers:
-      - name: netflix
+      - name: what
         image: abhijit7683/whatsapp:latest
         ports:
           - containerPort: 3000
@@ -23,11 +23,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: netflix
+  name: what
 spec:
   type: LoadBalancer
   selector:
-    app: netflix
+    app: what
   ports:
     - port: 3000
       targetPort: 3000
