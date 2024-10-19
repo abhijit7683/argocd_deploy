@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: netflix
-        image: abhijit7683/netflix:latest
+        image: abhijit7683/whatsapp:latest
         ports:
-          - containerPort: 80
+          - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -29,5 +29,5 @@ spec:
   selector:
     app: netflix
   ports:
-    - port: 8o
-      targetPort: 80
+    - port: 3000
+      targetPort: 3000
